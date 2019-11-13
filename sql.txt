@@ -1,0 +1,28 @@
+create database if not exists collegemanagement;
+
+use collegemanagement;
+
+CREATE TABLE `student` (
+  `id` int(11) NOT NULL,
+  `name` varchar(100) NOT NULL,
+  `branch` varchar(50) NOT NULL,
+  `year` varchar(30) NOT NULL,
+  `emailid` varchar(80) NOT NULL,
+  `linkinid` varchar(50) NOT NULL,
+  `studentid` varchar(30) NOT NULL,
+  `rollno` varchar(20) NOT NULL,
+  `dob` varchar(50) NOT NULL,
+  `address` varchar(100) NOT NULL,
+  `mobno` varchar(20) NOT NULL,
+  `username` varchar(20) NOT NULL,
+  `password` varchar(30) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+INSERT INTO `student` (`id`, `name`, `branch`, `year`, `emailid`, `linkinid`, `studentid`, `rollno`, `dob`, `address`, `mobno`, `username`, `password`) VALUES
+(2, 'Aaryan Tyagi', 'Computer Science', 'Second Year', 'aatyagi293@gmail.com', 'aaryan.3', 'PBE1564687', '3176', '2000-03-29', 'Shiv shakti', '8630282306', 'aaryantyagi', '12345678'),
+(3, 'Purvi Singh', 'Computer Science', 'Second Year', 'purvi2299@gmail.com', 'puri.9', 'PBE1564689', '3198', '2000-11-19', 'Shri Nagar', '8775665477', 'purvisingh', '87654321');
+INSERT INTO `student` ( `name`, `branch`, `year`, `emailid`, `linkinid`, `studentid`, `rollno`, `dob`, `address`, `mobno`, `username`, `password`) VALUES
+('Aayush Tyagi', 'Computer Science', 'Second Year', 'aayushtyagi183@gmail.com', 'aaryush.6', 'PBE1564680', '3177', '2000-03-29', 'Shiv shakti', '8630282876', 'aayushtyagi', '09876543');
+
+
+
