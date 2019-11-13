@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+.navbar {
+  overflow: hidden;
+  background-color: CornflowerBlue;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 10px 12px;
+  text-decoration: none;
+}
+.new {
+  overflow: hidden;
+  background-color:Plum ;
+  bottom: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  position:fixed;
+}
+
+.new a {
+  float: center;
+  font-size: 12px;
+  color: red;
+  text-align: center;
+  padding: 20px 20px;
+  text-decoration: none;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+.dropdown .dropbtn {
+  cursor: pointer;
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn, .dropbtn:focus {
+  background-color: LightGreen;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: Aquamarine;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color:black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: center;
+}
+
+.dropdown-content a:hover {
+  background-color:LightSeaGreen;
+}
+.but {
+  background-color: purple;
+  border: none;
+  color: white;
+  padding: 8px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  border-radius: 8px;
+}
+body {
+  background-image: url('123.bmp');
+   background-repeat: no-repeat;
+    background-size: cover;
+}
+h2 {
+  text-decoration: underline overline;
+}
+
+.show {
+  display: block;
+}
+</style>
+</head>
+<body bgcolor="LightBlue">
+<center><u ><h1 style="font-family:verdana; color:black;font-size: 50px;">HARVARD UNIVERSITY</h1></u></center>
+
+<div class="navbar">
+  <a href="#personal"><input class="but" type="button" value="Personal Info"></a>
+  <a href="#fee"><input class="but" type="button" value="Fee Detail"></a>
+  <a href="#attendance"><input class="but" type="button" value="My Attendance"></a>
+  <div class="dropdown">
+  <button class="dropbtn" onclick="myFunction()"><input class="but" type="button" value="Exam Info">
+    <i class="fa fa-caret-down"></i>
+  </button>
+  <div class="dropdown-content" id="myDropdown">
+    <a href="#">My Date sheet</a>
+    <a href="#">My Seating Plan</a>
+    <a href="#">Exam Marks</a>
+    <a href="#">Exam Grades</a>
+    <a href="#">View CGPA</a>
+  </div>
+  </div> 
+  <a href="#t&p"><input class="but" type="button" value="T&P"></a>
+  <a href="#pswrd"><input class="but" type="button" value="Change Password"></a>
+  <a href="#signout"><input class="but" type="button" value="Signout"></a>
+</div>
+<center><i><b><h2 style="font-family:courier; color:Salmon;font-size: 50px;">WELCOME</h2></b></i></center>
+<div class="new "><a href="index.html"><u><b><center>Click here to go to the website</center></b></u></a>
+</div>
+<script>
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+window.onclick = function(e) {
+  if (!e.target.matches('.dropbtn')) {
+  var myDropdown = document.getElementById("myDropdown");
+    if (myDropdown.classList.contains('show')) {
+      myDropdown.classList.remove('show');
+    }
+  }
+}
+</script>
+</body>
+</html>
