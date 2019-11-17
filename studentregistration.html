@@ -11,6 +11,21 @@
 <script type="text/javascript" src="js/jquery-1.4.2.min.js"></script>
 <script type="text/javascript" src="js/script.js"></script>
 <script type="text/javascript" src="js/coin-slider.min.js"></script>
+<script>
+function allLetter(inputtxt)
+      { 
+      var letters = /^[A-Za-z]+$/;
+      if(inputtxt.value.match(letters))
+      {
+      return true;
+      }
+      else
+      {
+      alert('Please input alphabet characters only');
+      return false;
+      }
+      }
+</script>
 </head>
 <body  style="background: url(images/main_bg.gif) repeat left top;">
 <div class="main" >
@@ -30,7 +45,7 @@
 	  </div>
 	  </div>
 
-	  <form action="studentregistration.php" method="POST"  >
+	  <form action="studentregistration.php" name="form1" method="POST" >
 <div class="container">
 	<div class="panel panel-primary" 
 style="margin:15px 350px 12px 30px;text-align:center;width:900px;border-radius:10px;">
@@ -55,24 +70,25 @@ style="margin:15px 350px 12px 30px;text-align:center;width:900px;border-radius:1
 </select><br> </tr></td>
 <div class="form-group" style="margin:30px;" >
 <tr><td>Email Id </td>	<td><input class="form-control" type="text" name="emailid" placeholder="Email id" required></td>
-<td style="padding-left:50px;">LinkedIn Id </td> <td style="padding-left:50px;"> <input class="form-control" type="text" name="linkid" placeholder="LinkedIn id" ><br></td></tr></div>
+<td style="padding-left:50px;"> Roll No </td >    <td style="padding-left:50px;"><input class="form-control" type="text" name="rollno" placeholder="Roll no."><br></td></tr></div>
 <div class="form-group" style="margin:30px;" >
 <tr><td>Student Id </td>   <td><input class="form-control" type="text" placeholder="Student id" name="stdid" ></td>
-<td style="padding-left:50px;"> Roll No </td >    <td style="padding-left:50px;"><input class="form-control" type="text" name="rollno" placeholder="Roll no."><br></tr></td></div>
+	<td style="padding-left:50px;" > Mobile No </td>	  <td style="padding-left:50px;" ><input class="form-control" type="text" name="mobileno"  placeholder="Mobile no."required>
+<br></td></tr></div>
 <div class="form-group" style="margin:30px;" >
-<tr><td>Date of Birth </td>   <td><input class="form-control" type="date" name="dob" required><br></tr></td>
+<tr><td>Date of Birth </td>   <td><input class="form-control" type="date" name="dob" required></td>
+	<td style="padding-left:50px;">Password </td>	<td style="padding-left:50px;"><input class="form-control" type="password" name="pass" placeholder="Password" required><br></tr></td>
 <div class="form-group" style="margin:30px;" >
 <tr><td>Address </td>		<td><input class="form-control" type="text" name="address" placeholder=" Enter your address" required><br></td>
 <div class="form-group" style="margin:30px;" >
-<td style="padding-left:50px;" > Mobile No </td>	  <td style="padding-left:50px;" ><input class="form-control" type="text" name="mobileno"  placeholder="Mobile no."required><br></tr></td>
+<br></tr>
 <div class="form-group" style="margin:30px;" >
 <tr><td>Username </td>    <td><input class="form-control" type="text" name="userid" placeholder="Username"required><br></td>
-<div class="form-group" style="margin:30px;" >
- <td style="padding-left:50px;">Password </td>	<td style="padding-left:50px;"><input class="form-control" type="password" name="pass" placeholder="Password" required><br></tr></td></div>
+ <br></tr></div>
 </table>
 
 <div class="form-group" style="margin:30px;" >	
-<input class="btn btn-primary" type="submit" value="Submit" >  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<input class="btn btn-primary" type="reset" value="Reset"></div>
+<input class="btn btn-primary" type="submit" value="Submit" onclick="return allLetter(document.form1.name)" >  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<input class="btn btn-primary" type="reset" value="Reset"></div>
 </div>
 </form>
 </div>
