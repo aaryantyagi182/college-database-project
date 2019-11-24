@@ -29,7 +29,7 @@ header("Location: studentlogin.html");
 <div  >Welcome <?php echo"".$check; ?> <a href="logouts.php"><font  size="4" color="violet" align="right">&nbsp;LogOut</font></a></div></font>
 <div class="main">
  <div class="logo">
-        <h1><a href="main.php">Student&nbsp;<span>Portal</span></a></h1>
+        <h1><a href="studentportel.php">Student&nbsp;<span>Portal</span></a></h1>
       </div>
   <div class="header">
    <div class="header_resize">
@@ -38,7 +38,7 @@ header("Location: studentlogin.html");
           <li><a href="index.html"><span>Home</span></a></li>
 		  <li><a href="studentprofile.html"><span>View/Edit Profile</span></a></li>	
 <li><a href="requestandsuggestion.html"><span>Request/Suggestation</span></a></li>
-		  		
+		  		<li><a href="changepassword.html"><span>Change Password</span></a></li>
 		</ul>
       </div> </div>
         <div class="header">
@@ -46,7 +46,6 @@ header("Location: studentlogin.html");
       <div class="menu_nav">
         <ul>
           <li><a href="attendances1.html"><span>View Attendance</span></a></li>
-          <li><a href="feedbackstd.html"><span>Feedback Form</span></a></li>
 
 		  </div>
    </div>

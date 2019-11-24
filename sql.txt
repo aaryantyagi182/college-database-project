@@ -31,3 +31,26 @@ INSERT INTO login values('PBE1564687', 'aaryantyagi', '12345678'),('PBE1564689',
 alter table login
 ADD CONSTRAINT FK_Student
 FOREIGN KEY (studentid) REFERENCES student(studentid);
+
+CREATE TABLE `suggestion` (
+  `id` int(11) NOT NULL,
+  `rs` varchar(1000) NOT NULL,
+  `date` varchar(20) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+create table subject
+(studentid varchar(30), 
+TFCS int,DBMS int,
+Economics int,
+DS int,
+DBMS_Lab int,
+DS_Lab int)ENGINE=InnoDB DEFAULT CHARSET=latin1;
+//PLSQL 
+DELIMITER $$
+create procedure passwordupdate(IN s varchar(20),IN pass varchar(30))
+BEGIN
+UPDATE login
+set password=pass
+where username=s;
+END$$
+DELIMITER ;
